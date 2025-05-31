@@ -14,15 +14,15 @@ def search_string(pattern: str, raw_string) -> str:
 
 
 def data_splicer(path: str) -> tuple[str, str, str]:
-    file_name = os.path.split(path)[1].split(".")[0]
+    file_name = os.path.splitext(os.path.split(path)[1])[0]
 
     album = file_name[:file_name.find("{")].strip()
 
-    song_tittle = search_string(r"{(.+)}", file_name).strip()
+    song_title = search_string(r"{(.+)}", file_name).strip()
 
     artist = search_string(r"\[(.+)\]", file_name).strip()
 
-    return (artist, song_tittle, album)
+    return (artist, song_title, album)
 
 
 def main():

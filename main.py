@@ -23,7 +23,7 @@ def main():
         artist, song_tittle, album = data_splicer(flac)
 
         current_flac["artist"] = [f"{artist}"]
-        current_flac["tittle"] = [f"{song_tittle}"]
+        current_flac["title"] = [f"{song_tittle}"]
         current_flac["album"] = [f"{album}"]
 
         current_flac.save()
