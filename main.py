@@ -1,4 +1,5 @@
 import os
+import mutagen
 
 from functions.path_input import get_user_path
 from functions.path_grabber import grab_path_to_flacs
@@ -10,11 +11,9 @@ def main():
 
     songs_dir = get_user_path(default_path)
 
-    print(songs_dir)
-
     flacs = grab_path_to_flacs(songs_dir)
 
-    print(flacs)
+    print(f"working on song in {songs_dir}\nfound {len(flacs)} songs.")
 
 
 if __name__ == '__main__':
