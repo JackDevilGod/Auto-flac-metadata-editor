@@ -28,6 +28,11 @@ def main():
 
         current_flac.save()
 
+    exit = input("q for exit\n")
+
+    while exit != "q":
+        exit = input("q for exit\n")
+
 
 if __name__ == '__main__':
     main()
