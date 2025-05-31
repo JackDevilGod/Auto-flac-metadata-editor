@@ -1,5 +1,6 @@
 import os
 from mutagen import flac as flc
+from tqdm import tqdm
 
 from functions.path_input import get_user_path
 from functions.path_grabber import grab_path_to_flacs
@@ -16,7 +17,7 @@ def main():
 
     print(f"working on song in {songs_dir}\nfound {len(flacs)} songs.")
 
-    for flac in flacs:
+    for flac in tqdm(flacs):
         current_flac = flc.Open(flac)
 
         artist, song_tittle, album = data_splicer(flac)
