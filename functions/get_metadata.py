@@ -26,7 +26,8 @@ def data_splicer(path: str) -> tuple[str, str, str]:
 
 
 def main():
-    test_path = "D:\vs_projects\flac-renamer\songs\Ace Attorney {Never Lose} [Yamashita Tomohisa].flac"
+    test_path = ("D:\\vs_projects\\flac-renamer\\songs\\" +
+                 "Ace Attorney {Never Lose} [Yamashita Tomohisa].flac")
 
     print(data_splicer(test_path))
 
